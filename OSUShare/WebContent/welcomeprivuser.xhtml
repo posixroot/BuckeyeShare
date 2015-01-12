@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/WEB-INF/templates/BasicTemplate.xhtml">
+    <ui:define name="content">
+    
+     <h:form>
+            <h:panelGrid columns="2">
+                <h:outputText value="Welcome Privilege User"></h:outputText>
+                
+                          <h:outputText></h:outputText>
+           
+				
+            </h:panelGrid>
+            <h:commandButton value="View All Catalogs" action="#{browseCatalogsBean.allCatalogs}"></h:commandButton>
+			 <h:commandButton value="Update Profile" action="update"></h:commandButton>
+			 <br/>
+			 <br/>
+			 <h:commandButton value="View My Catalogs" action="#{browseCatalogsBean.myCatalogs}"></h:commandButton>
+			 <h:commandButton value="View Download Feed" action="#{feedBean.getFeed}"></h:commandButton>
+			 <br/>
+			 <br/>
+            <h:commandButton value="Logout" action="#{loginBean.clearLogout}"></h:commandButton>            
+       
+
+        </h:form>
+        
+        
+    </ui:define>
+</ui:composition>
+</html>

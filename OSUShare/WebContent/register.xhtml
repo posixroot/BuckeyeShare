@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/WEB-INF/templates/BasicTemplate.xhtml">
+    <ui:define name="content">
+        <h:form>
+            <h:panelGrid columns="3">
+                <h:outputText id = "o1" value="Name"></h:outputText>
+                <h:inputText id = "i1" value="#{registerBean.uname}"></h:inputText>
+                <h:commandButton value="Is Name Valid?">
+            	            <f:ajax execute = "i1" render = "o3"></f:ajax>
+            	</h:commandButton>
+                <h:outputText  id = "o2" value="Password"></h:outputText>
+                <h:inputSecret  id = "i2" value="#{registerBean.password}"></h:inputSecret>
+                <h:outputText  id = "o3" value="#{registerBean.valid}"></h:outputText>
+				<h:outputText value="Privilege Access Code"></h:outputText>
+				<h:inputText id = "i3" value="#{registerBean.code}"></h:inputText>
+				<h:outputText></h:outputText>
+				<h:outputText></h:outputText>
+				<h:commandButton value="Register" action="#{registerBean.register}"></h:commandButton>
+            	<h:commandButton value="Go to Login" action="login"></h:commandButton>
+          	</h:panelGrid>
+            
+            
+            
+<!--             <h:graphicImage name="images/Register.gif" width="70" height="30" style= "position:  -->
+<!--             absolute; left: 300px; top: 85px;"/> -->
+            
+<!--    		    <h:commandButton value="Test" action="test"></h:commandButton> -->
+        </h:form>
+    </ui:define>
+</ui:composition>
+</html>

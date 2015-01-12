@@ -1,0 +1,790 @@
+<faces-config
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+    version="2.2">
+
+	<managed-bean>
+	  <managed-bean-name>loginBean</managed-bean-name>
+	  <managed-bean-class>edu.osu.dec.LoginBean</managed-bean-class>
+ 	  <managed-bean-scope>application</managed-bean-scope>
+	</managed-bean>
+
+	<managed-bean>
+	  <managed-bean-name>registerBean</managed-bean-name>
+	  <managed-bean-class>edu.osu.dec.RegisterBean</managed-bean-class>
+ 	  <managed-bean-scope>application</managed-bean-scope>
+	</managed-bean>
+
+	<managed-bean>
+	  <managed-bean-name>profileBean</managed-bean-name>
+	  <managed-bean-class>edu.osu.dec.ProfileBean</managed-bean-class>
+ 	  <managed-bean-scope>application</managed-bean-scope>
+ 	  <managed-property>
+ 	  	<property-name>logBean</property-name>
+ 	  	<property-class>edu.osu.dec.LoginBean</property-class>
+ 	  	<value>#{loginBean}</value>
+ 	  </managed-property>
+	</managed-bean>
+	
+	<managed-bean>
+	  <managed-bean-name>browseCatalogsBean</managed-bean-name>
+	  <managed-bean-class>edu.osu.dec.BrowseCatalogsBean</managed-bean-class>
+ 	  <managed-bean-scope>application</managed-bean-scope>
+ 	  <managed-property>
+ 	  	<property-name>logBean</property-name>
+ 	  	<property-class>edu.osu.dec.LoginBean</property-class>
+ 	  	<value>#{loginBean}</value>
+ 	  </managed-property>
+	</managed-bean>
+	
+	<managed-bean>
+	  <managed-bean-name>browseFilesBean</managed-bean-name>
+	  <managed-bean-class>edu.osu.dec.BrowseFilesBean</managed-bean-class>
+ 	  <managed-bean-scope>application</managed-bean-scope>
+ 	  <managed-property>
+ 	  	<property-name>bcb</property-name>
+ 	  	<property-class>edu.osu.dec.BrowseCatalogsBean</property-class>
+ 	  	<value>#{browseCatalogsBean}</value>
+ 	  </managed-property>
+	</managed-bean>
+	
+	<managed-bean>
+	  <managed-bean-name>createCatalogBean</managed-bean-name>
+	  <managed-bean-class>edu.osu.dec.CreateCatalogBean</managed-bean-class>
+ 	  <managed-bean-scope>application</managed-bean-scope>
+ 	  <managed-property>
+ 	  	<property-name>logBean</property-name>
+ 	  	<property-class>edu.osu.dec.LoginBean</property-class>
+ 	  	<value>#{loginBean}</value>
+ 	  </managed-property>
+	</managed-bean>
+	
+	<managed-bean>
+	  <managed-bean-name>feedBean</managed-bean-name>
+	  <managed-bean-class>edu.osu.dec.FeedBean</managed-bean-class>
+ 	  <managed-bean-scope>application</managed-bean-scope>
+ 	  <managed-property>
+ 	  	<property-name>logBean</property-name>
+ 	  	<property-class>edu.osu.dec.LoginBean</property-class>
+ 	  	<value>#{loginBean}</value>
+ 	  </managed-property>
+	</managed-bean>
+	
+	<managed-bean>
+	  <managed-bean-name>uploadBean</managed-bean-name>
+	  <managed-bean-class>edu.osu.dec.UploadBean</managed-bean-class>
+ 	  <managed-bean-scope>application</managed-bean-scope>
+ 	  <managed-property>
+ 	  	<property-name>bcb</property-name>
+ 	  	<property-class>edu.osu.dec.BrowseCatalogsBean</property-class>
+ 	  	<value>#{browseCatalogsBean}</value>
+ 	  </managed-property>
+ 	  <managed-property>
+ 	  	<property-name>logBean</property-name>
+ 	  	<property-class>edu.osu.dec.LoginBean</property-class>
+ 	  	<value>#{loginBean}</value>
+ 	  </managed-property>
+	</managed-bean>
+	
+	<managed-bean>
+	  <managed-bean-name>downloadBean</managed-bean-name>
+	  <managed-bean-class>edu.osu.dec.DownloadBean</managed-bean-class>
+ 	  <managed-bean-scope>application</managed-bean-scope>
+ 	  <managed-property>
+ 	  	<property-name>logBean</property-name>
+ 	  	<property-class>edu.osu.dec.LoginBean</property-class>
+ 	  	<value>#{loginBean}</value>
+ 	  </managed-property>
+	</managed-bean>
+	
+	<managed-bean>
+	  <managed-bean-name>deleteBean</managed-bean-name>
+	  <managed-bean-class>edu.osu.dec.DeleteBean</managed-bean-class>
+ 	  <managed-bean-scope>application</managed-bean-scope>
+	</managed-bean>
+	
+	
+	
+	<!-- Login Screen Nav Rules -->
+	<navigation-rule>
+	  <display-name>login.xhtml</display-name>
+	  <from-view-id>/login.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>normal</from-outcome>
+		<to-view-id>/welcome.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+	  <display-name>login.xhtml</display-name>
+	  <from-view-id>/login.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>privilege</from-outcome>
+		<to-view-id>/welcomeprivuser.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+	  <display-name>login.xhtml</display-name>
+	  <from-view-id>/login.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>fail</from-outcome>
+		<to-view-id>/loginfail.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+	  <display-name>login.xhtml</display-name>
+	  <from-view-id>/login.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>signup</from-outcome>
+		<to-view-id>/register.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+
+	<!-- Loginfail Screen Nav Rules -->
+	<navigation-rule>
+	  <display-name>loginfail.xhtml</display-name>
+	  <from-view-id>/loginfail.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>login</from-outcome>
+		<to-view-id>/login.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<!-- Logout Screen Nav Rules -->
+	<navigation-rule>
+	  <display-name>logout.xhtml</display-name>
+	  <from-view-id>/logout.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>gotologin</from-outcome>
+		<to-view-id>/login.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<!-- Logout Screen Nav Rules -->
+	<navigation-rule>
+	  <display-name>exit.xhtml</display-name>
+	  <from-view-id>/exit.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>gotologin</from-outcome>
+		<to-view-id>/login.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+ 	<!-- Welcome Screen Nav Rules -->
+ 	<navigation-rule>
+	  <display-name>welcome.xhtml</display-name>
+	  <from-view-id>/welcome.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>update</from-outcome>
+		<to-view-id>/profile.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+	  <display-name>welcome.xhtml</display-name>
+	  <from-view-id>/welcome.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>logout</from-outcome>
+		<to-view-id>/logout.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+	  <display-name>welcome.xhtml</display-name>
+	  <from-view-id>/welcome.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>allcatalogs</from-outcome>
+		<to-view-id>/allcatalogs.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+	<display-name>welcome.xhtml</display-name>
+	  <from-view-id>/welcome.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>false</from-outcome>
+		<to-view-id>/nocatalogs.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+
+	
+ 	<!-- WelcomePrivUser Screen Nav Rules -->
+ 	<navigation-rule>
+	  <display-name>welcomeprivuser.xhtml</display-name>
+	  <from-view-id>/welcomeprivuser.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>update</from-outcome>
+		<to-view-id>/profile.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+	<display-name>welcomeprivuser.xhtml</display-name>
+	  <from-view-id>/welcomeprivuser.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>logout</from-outcome>
+		<to-view-id>/logout.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+	<display-name>welcomeprivuser.xhtml</display-name>
+	  <from-view-id>/welcomeprivuser.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>allcatalogs</from-outcome>
+		<to-view-id>/allcatalogs.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+	<display-name>welcomeprivuser.xhtml</display-name>
+	  <from-view-id>/welcomeprivuser.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>mycatalogs</from-outcome>
+		<to-view-id>/mycatalogs.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+	<display-name>welcomeprivuser.xhtml</display-name>
+	  <from-view-id>/welcomeprivuser.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>false</from-outcome>
+		<to-view-id>/nocatalogs.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+	<display-name>welcomeprivuser.xhtml</display-name>
+	  <from-view-id>/welcomeprivuser.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>feed</from-outcome>
+		<to-view-id>/feed.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+
+
+	<!-- Register Screen Nav Rules -->
+	<navigation-rule>
+	  <display-name>register.xhtml</display-name>
+	  <from-view-id>/register.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>success</from-outcome>
+		<to-view-id>/registered.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+	  <display-name>register.xhtml</display-name>
+	  <from-view-id>/register.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>fail</from-outcome>
+		<to-view-id>/registerfail.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+	  <display-name>register.xhtml</display-name>
+	  <from-view-id>/register.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>login</from-outcome>
+		<to-view-id>/login.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<!-- Registered Screen Nav Rules -->
+	<navigation-rule>
+	  <display-name>registered.xhtml</display-name>
+	  <from-view-id>/registered.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>login</from-outcome>
+		<to-view-id>/login.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<!-- Registerfail Screen Nav Rules -->
+	<navigation-rule>
+	  <display-name>registerfail.xhtml</display-name>
+	  <from-view-id>/registerfail.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>login</from-outcome>
+		<to-view-id>/login.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+	  <display-name>registerfail.xhtml</display-name>
+	  <from-view-id>/registerfail.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>register</from-outcome>
+		<to-view-id>/register.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<!-- Profile Screen Nav Rules -->
+	<navigation-rule>
+	  <display-name>profile.xhtml</display-name>
+	  <from-view-id>/profile.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>success</from-outcome>
+		<to-view-id>/profileupdated.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+	  <display-name>profile.xhtml</display-name>
+	  <from-view-id>/profile.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>fail</from-outcome>
+		<to-view-id>/profileupdatefail.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+	  <display-name>profile.xhtml</display-name>
+	  <from-view-id>/profile.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>normal</from-outcome>
+		<to-view-id>/welcome.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+	  <display-name>profile.xhtml</display-name>
+	  <from-view-id>/profile.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>privilege</from-outcome>
+		<to-view-id>/welcomeprivuser.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>		
+
+	<!-- ProfileUpdateFail Screen Nav Rules -->
+	<navigation-rule>
+	  <display-name>profileupdatefail.xhtml</display-name>
+	  <from-view-id>/profileupdatefail.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>profile</from-outcome>
+		<to-view-id>/profile.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<!-- ProfileUpdated Screen Nav Rules -->
+	<navigation-rule>
+	  <display-name>profileupdated.xhtml</display-name>
+	  <from-view-id>/profileupdated.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>normal</from-outcome>
+		<to-view-id>/welcome.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+	  <display-name>profileupdated.xhtml</display-name>
+	  <from-view-id>/profileupdated.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>privilege</from-outcome>
+		<to-view-id>/welcomeprivuser.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<!-- AllCatalogs Screen Nav Rules -->
+	<navigation-rule>
+	  <display-name>allcatalogs.xhtml</display-name>
+	  <from-view-id>/allcatalogs.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>normal</from-outcome>
+		<to-view-id>/welcome.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+	  <display-name>allcatalogs.xhtml</display-name>
+	  <from-view-id>/allcatalogs.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>privilege</from-outcome>
+		<to-view-id>/welcomeprivuser.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+	  <display-name>allcatalogs.xhtml</display-name>
+	  <from-view-id>/allcatalogs.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>true</from-outcome>
+		<to-view-id>/listfiles.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+	  <display-name>allcatalogs.xhtml</display-name>
+	  <from-view-id>/allcatalogs.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>false</from-outcome>
+		<to-view-id>/nofiles.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+	  <display-name>allcatalogs.xhtml</display-name>
+	  <from-view-id>/allcatalogs.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>allcatalogs</from-outcome>
+		<to-view-id>/allcatalogs.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+
+	<!-- MyCatalogs Screen Nav Rules -->
+	<navigation-rule>
+	  <display-name>mycatalogs.xhtml</display-name>
+	  <from-view-id>/mycatalogs.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>normal</from-outcome>
+		<to-view-id>/welcome.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+	  <display-name>mycatalogs.xhtml</display-name>
+	  <from-view-id>/mycatalogs.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>privilege</from-outcome>
+		<to-view-id>/welcomeprivuser.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+	  <display-name>mycatalogs.xhtml</display-name>
+	  <from-view-id>/mycatalogs.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>true</from-outcome>
+		<to-view-id>/listmyfiles.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+	  <display-name>mycatalogs.xhtml</display-name>
+	  <from-view-id>/mycatalogs.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>false</from-outcome>
+		<to-view-id>/nofiles.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+	  <display-name>mycatalogs.xhtml</display-name>
+	  <from-view-id>/mycatalogs.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>create</from-outcome>
+		<to-view-id>/catalogcreate.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+	  <display-name>mycatalogs.xhtml</display-name>
+	  <from-view-id>/mycatalogs.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>fileupload</from-outcome>
+		<to-view-id>/fileupload.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+	  <display-name>mycatalogs.xhtml</display-name>
+	  <from-view-id>/mycatalogs.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>deletecatsuccess</from-outcome>
+		<to-view-id>/catalogdeleted.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+	  <display-name>mycatalogs.xhtml</display-name>
+	  <from-view-id>/mycatalogs.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>mycatalogs</from-outcome>
+		<to-view-id>/mycatalogs.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<!-- NoCatalogs Screen Nav Rules -->	
+	<navigation-rule>
+	  <display-name>nocatalogs.xhtml</display-name>
+	  <from-view-id>/nocatalogs.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>normal</from-outcome>
+		<to-view-id>/welcome.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+	  <display-name>nocatalogs.xhtml</display-name>
+	  <from-view-id>/nocatalogs.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>privilege</from-outcome>
+		<to-view-id>/welcomeprivuser.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<!-- ListFiles Screen Nav Rules -->
+	
+<!-- 	<navigation-rule> -->
+<!-- 	  <display-name>listfiles.xhtml</display-name> -->
+<!-- 	  <from-view-id>/listfiles.xhtml</from-view-id> -->
+<!-- 	  <navigation-case> -->
+<!-- 	  	<from-outcome>mycatalogs</from-outcome> -->
+<!-- 		<to-view-id>/mycatalogs.xhtml</to-view-id> -->
+<!-- 		<redirect/> -->
+<!-- 	  </navigation-case> -->
+<!-- 	</navigation-rule> -->
+	
+	<navigation-rule>
+	  <display-name>listfiles.xhtml</display-name>
+	  <from-view-id>/listfiles.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>allcatalogs</from-outcome>
+		<to-view-id>/allcatalogs.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<!-- ListMyFiles Screen Nav Rules -->
+	<navigation-rule>
+	  <display-name>listmyfiles.xhtml</display-name>
+	  <from-view-id>/listmyfiles.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>mycatalogs</from-outcome>
+		<to-view-id>/mycatalogs.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	
+<!-- 	<navigation-rule> -->
+<!-- 	  <display-name>listfiles.xhtml</display-name> -->
+<!-- 	  <from-view-id>/listfiles.xhtml</from-view-id> -->
+<!-- 	  <navigation-case> -->
+<!-- 	  	<from-outcome>allcatalogs</from-outcome> -->
+<!-- 		<to-view-id>/allcatalogs.xhtml</to-view-id> -->
+<!-- 		<redirect/> -->
+<!-- 	  </navigation-case> -->
+<!-- 	</navigation-rule> -->
+
+	<navigation-rule>
+	  <display-name>listmyfiles.xhtml</display-name>
+	  <from-view-id>/listmyfiles.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>deletesuccess</from-outcome>
+		<to-view-id>/filedeleted.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+
+	<!-- NoFiles Screen Nav Rules -->
+	<navigation-rule>
+	  <display-name>nofiles.xhtml</display-name>
+	  <from-view-id>/nofiles.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>mycatalogs</from-outcome>
+		<to-view-id>/mycatalogs.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+	  <display-name>nofiles.xhtml</display-name>
+	  <from-view-id>/nofiles.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>allcatalogs</from-outcome>
+		<to-view-id>/allcatalogs.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<!-- CatalogCreate Screen Nav Rules -->
+	<navigation-rule>
+	  <display-name>catalogcreate.xhtml</display-name>
+	  <from-view-id>/catalogcreate.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>true</from-outcome>
+		<to-view-id>/catalogcreated.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+	  <display-name>catalogcreate.xhtml</display-name>
+	  <from-view-id>/catalogcreate.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>false</from-outcome>
+		<to-view-id>/catalogcreatefail.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<!-- CatalogCreated Screen Nav Rules -->
+	<navigation-rule>
+	  <display-name>catalogcreated.xhtml</display-name>
+	  <from-view-id>/catalogcreated.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>mycatalogs</from-outcome>
+		<to-view-id>/mycatalogs.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<!-- CatalogCreateFail Screen Nav Rules -->
+	<navigation-rule>
+	  <display-name>catalogcreatefail.xhtml</display-name>
+	  <from-view-id>/catalogcreatefail.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>mycatalogs</from-outcome>
+		<to-view-id>/mycatalogs.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<!-- Feed Screen Nav Rules -->
+	<navigation-rule>
+	  <display-name>feed.xhtml</display-name>
+	  <from-view-id>/feed.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>back</from-outcome>
+		<to-view-id>/welcomeprivuser.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+	  <display-name>feed.xhtml</display-name>
+	  <from-view-id>/feed.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>feed</from-outcome>
+		<to-view-id>/feed.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<!-- FileUpload Screen Nav Rules -->
+	<navigation-rule>
+	  <display-name>fileupload.xhtml</display-name>
+	  <from-view-id>/fileupload.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>success</from-outcome>
+		<to-view-id>/uploaded.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+	  <display-name>fileupload.xhtml</display-name>
+	  <from-view-id>/fileupload.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>fail</from-outcome>
+		<to-view-id>/uploadfail.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+	  <display-name>fileupload.xhtml</display-name>
+	  <from-view-id>/fileupload.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>home</from-outcome>
+		<to-view-id>/welcomeprivuser.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<!-- Uploaded Screen Nav Rules -->
+	<navigation-rule>
+	  <display-name>uploaded.xhtml</display-name>
+	  <from-view-id>/uploaded.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>home</from-outcome>
+		<to-view-id>/welcomeprivuser.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<!-- UploadFail Screen Nav Rules -->
+	<navigation-rule>
+	  <display-name>uploadfail.xhtml</display-name>
+	  <from-view-id>/uploadfail.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>home</from-outcome>
+		<to-view-id>/welcomeprivuser.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<!-- FileDeleted Screen Nav Rules FOR FILES -->
+	<navigation-rule>
+	  <display-name>filedeleted.xhtml</display-name>
+	  <from-view-id>/filedeleted.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>home</from-outcome>
+		<to-view-id>/welcomeprivuser.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+	
+	<!-- CatalogDeleted Screen Nav Rules FOR CATALOGS -->
+	<navigation-rule>
+	  <display-name>catalogdeleted.xhtml</display-name>
+	  <from-view-id>/catalogdeleted.xhtml</from-view-id>
+	  <navigation-case>
+	  	<from-outcome>home</from-outcome>
+		<to-view-id>/welcomeprivuser.xhtml</to-view-id>
+		<redirect/>
+	  </navigation-case>
+	</navigation-rule>
+
+</faces-config>

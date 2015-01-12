@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#login.xhtml" PATH="/login.xhtml"
+  SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#login.xhtml:0" NAME="item"
+   PATH="/login.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="normal::#welcome.xhtml" NAME="output"
+    PATH="/welcome.xhtml" TARGET="rules:#welcome.xhtml" TITLE="normal" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#login.xhtml:1" NAME="item1"
+   PATH="/login.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="privilege::#welcomeprivuser.xhtml"
+    NAME="output" PATH="/welcomeprivuser.xhtml"
+    TARGET="rules:#welcomeprivuser.xhtml" TITLE="privilege" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#login.xhtml:2" NAME="item2"
+   PATH="/login.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="fail::#loginfail.xhtml" NAME="output"
+    PATH="/loginfail.xhtml" TARGET="rules:#loginfail.xhtml" TITLE="fail" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#login.xhtml:3" NAME="item3"
+   PATH="/login.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="signup::#register.xhtml" NAME="output"
+    PATH="/register.xhtml" TARGET="rules:#register.xhtml" TITLE="signup" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#welcome.xhtml" PATH="/welcome.xhtml"
+  SHAPE="240,33,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#welcome.xhtml:0" NAME="item"
+   PATH="/welcome.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="update::#profile.xhtml" NAME="output"
+    PATH="/profile.xhtml" TARGET="rules:#profile.xhtml" TITLE="update" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#welcome.xhtml:1" NAME="item1"
+   PATH="/welcome.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="logout::#logout.xhtml" NAME="output"
+    PATH="/logout.xhtml" TARGET="rules:#logout.xhtml" TITLE="logout" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#welcome.xhtml:2" NAME="item2"
+   PATH="/welcome.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="allcatalogs::#allcatalogs.xhtml"
+    NAME="output" PATH="/allcatalogs.xhtml"
+    TARGET="rules:#allcatalogs.xhtml" TITLE="allcatalogs" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#welcome.xhtml:3" NAME="item3"
+   PATH="/welcome.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="false::#nocatalogs.xhtml" NAME="output"
+    PATH="/nocatalogs.xhtml" TARGET="rules:#nocatalogs.xhtml"
+    TITLE="false" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#welcomeprivuser.xhtml"
+  PATH="/welcomeprivuser.xhtml" SHAPE="272,209,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#welcomeprivuser.xhtml:0" NAME="item"
+   PATH="/welcomeprivuser.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="update::#profile.xhtml" NAME="output"
+    PATH="/profile.xhtml" TARGET="rules:#profile.xhtml" TITLE="update" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#welcomeprivuser.xhtml:1" NAME="item1"
+   PATH="/welcomeprivuser.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="logout::#logout.xhtml" NAME="output"
+    PATH="/logout.xhtml" TARGET="rules:#logout.xhtml" TITLE="logout" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#welcomeprivuser.xhtml:2" NAME="item2"
+   PATH="/welcomeprivuser.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="allcatalogs::#allcatalogs.xhtml"
+    NAME="output" PATH="/allcatalogs.xhtml"
+    TARGET="rules:#allcatalogs.xhtml" TITLE="allcatalogs" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#welcomeprivuser.xhtml:3" NAME="item3"
+   PATH="/welcomeprivuser.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="mycatalogs::#mycatalogs.xhtml" NAME="output"
+    PATH="/mycatalogs.xhtml" TARGET="rules:#mycatalogs.xhtml"
+    TITLE="mycatalogs" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#welcomeprivuser.xhtml:4" NAME="item4"
+   PATH="/welcomeprivuser.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="false::#nocatalogs.xhtml" NAME="output"
+    PATH="/nocatalogs.xhtml" TARGET="rules:#nocatalogs.xhtml"
+    TITLE="false" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#welcomeprivuser.xhtml:5" NAME="item5"
+   PATH="/welcomeprivuser.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="feed::#feed.xhtml" NAME="output"
+    PATH="/feed.xhtml" TARGET="rules:#feed.xhtml" TITLE="feed" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#loginfail.xhtml" PATH="/loginfail.xhtml"
+  SHAPE="272,321,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#loginfail.xhtml:0" NAME="item"
+   PATH="/loginfail.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="login::#login.xhtml" NAME="output"
+    PATH="/login.xhtml" TARGET="rules:#login.xhtml" TITLE="login" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#register.xhtml" PATH="/register.xhtml"
+  SHAPE="288,465,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#register.xhtml:0" NAME="item"
+   PATH="/register.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="success::#registered.xhtml" NAME="output"
+    PATH="/registered.xhtml" TARGET="rules:#registered.xhtml"
+    TITLE="success" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#register.xhtml:1" NAME="item1"
+   PATH="/register.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="fail::#registerfail.xhtml" NAME="output"
+    PATH="/registerfail.xhtml" TARGET="rules:#registerfail.xhtml"
+    TITLE="fail" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#register.xhtml:2" NAME="item2"
+   PATH="/register.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="login::#login.xhtml" NAME="output"
+    PATH="/login.xhtml" TARGET="rules:#login.xhtml" TITLE="login" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#registerfail.xhtml"
+  PATH="/registerfail.xhtml" SHAPE="512,705,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#registerfail.xhtml:0" NAME="item"
+   PATH="/registerfail.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="login::#login.xhtml" NAME="output"
+    PATH="/login.xhtml" TARGET="rules:#login.xhtml" TITLE="login" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#registerfail.xhtml:1" NAME="item1"
+   PATH="/registerfail.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="register::#register.xhtml" NAME="output"
+    PATH="/register.xhtml" TARGET="rules:#register.xhtml"
+    TITLE="register" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#registered.xhtml" PATH="/registered.xhtml"
+  SHAPE="512,561,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#registered.xhtml:0" NAME="item"
+   PATH="/registered.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="login::#login.xhtml" NAME="output"
+    PATH="/login.xhtml" TARGET="rules:#login.xhtml" TITLE="login" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#profile.xhtml" PATH="/profile.xhtml"
+  SHAPE="32,993,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#profile.xhtml:0" NAME="item"
+   PATH="/profile.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="success::#profileupdated.xhtml"
+    NAME="output" PATH="/profileupdated.xhtml"
+    TARGET="rules:#profileupdated.xhtml" TITLE="success" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#profile.xhtml:1" NAME="item1"
+   PATH="/profile.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="fail::#profileupdatefail.xhtml"
+    NAME="output" PATH="/profileupdatefail.xhtml"
+    TARGET="rules:#profileupdatefail.xhtml" TITLE="fail" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#profile.xhtml:2" NAME="item2"
+   PATH="/profile.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="normal::#welcome.xhtml" NAME="output"
+    PATH="/welcome.xhtml" TARGET="rules:#welcome.xhtml" TITLE="normal" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#profile.xhtml:3" NAME="item3"
+   PATH="/profile.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="privilege::#welcomeprivuser.xhtml"
+    NAME="output" PATH="/welcomeprivuser.xhtml"
+    TARGET="rules:#welcomeprivuser.xhtml" TITLE="privilege" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#profileupdatefail.xhtml"
+  PATH="/profileupdatefail.xhtml" SHAPE="256,1153,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#profileupdatefail.xhtml:0" NAME="item"
+   PATH="/profileupdatefail.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="profile::#profile.xhtml" NAME="output"
+    PATH="/profile.xhtml" TARGET="rules:#profile.xhtml" TITLE="profile" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#profileupdated.xhtml"
+  PATH="/profileupdated.xhtml" SHAPE="256,1009,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#profileupdated.xhtml:0" NAME="item"
+   PATH="/profileupdated.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="normal::#welcome.xhtml" NAME="output"
+    PATH="/welcome.xhtml" TARGET="rules:#welcome.xhtml" TITLE="normal" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#profileupdated.xhtml:1" NAME="item1"
+   PATH="/profileupdated.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="privilege::#welcomeprivuser.xhtml"
+    NAME="output" PATH="/welcomeprivuser.xhtml"
+    TARGET="rules:#welcomeprivuser.xhtml" TITLE="privilege" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#logout.xhtml" PATH="/logout.xhtml"
+  SHAPE="576,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#logout.xhtml:0" NAME="item"
+   PATH="/logout.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="gotologin::#login.xhtml" NAME="output"
+    PATH="/login.xhtml" TARGET="rules:#login.xhtml" TITLE="gotologin" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#exit.xhtml" PATH="/exit.xhtml"
+  SHAPE="96,225,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#exit.xhtml:0" NAME="item" PATH="/exit.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="gotologin::#login.xhtml" NAME="output"
+    PATH="/login.xhtml" TARGET="rules:#login.xhtml" TITLE="gotologin" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#allcatalogs.xhtml" PATH="/allcatalogs.xhtml"
+  SHAPE="592,225,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#allcatalogs.xhtml:0" NAME="item"
+   PATH="/allcatalogs.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="normal::#welcome.xhtml" NAME="output"
+    PATH="/welcome.xhtml" TARGET="rules:#welcome.xhtml" TITLE="normal" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#allcatalogs.xhtml:1" NAME="item1"
+   PATH="/allcatalogs.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="privilege::#welcomeprivuser.xhtml"
+    NAME="output" PATH="/welcomeprivuser.xhtml"
+    TARGET="rules:#welcomeprivuser.xhtml" TITLE="privilege" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#allcatalogs.xhtml:2" NAME="item2"
+   PATH="/allcatalogs.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="true::#listfiles.xhtml" NAME="output"
+    PATH="/listfiles.xhtml" TARGET="rules:#listfiles.xhtml" TITLE="true" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#allcatalogs.xhtml:3" NAME="item3"
+   PATH="/allcatalogs.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="false::#nofiles.xhtml" NAME="output"
+    PATH="/nofiles.xhtml" TARGET="rules:#nofiles.xhtml" TITLE="false" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#allcatalogs.xhtml:4" NAME="item4"
+   PATH="/allcatalogs.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="allcatalogs::#allcatalogs.xhtml"
+    NAME="output" PATH="/allcatalogs.xhtml"
+    TARGET="rules:#allcatalogs.xhtml" TITLE="allcatalogs" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#mycatalogs.xhtml" PATH="/mycatalogs.xhtml"
+  SHAPE="96,225,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#mycatalogs.xhtml:0" NAME="item"
+   PATH="/mycatalogs.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="normal::#welcome.xhtml" NAME="output"
+    PATH="/welcome.xhtml" TARGET="rules:#welcome.xhtml" TITLE="normal" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#mycatalogs.xhtml:1" NAME="item1"
+   PATH="/mycatalogs.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="privilege::#welcomeprivuser.xhtml"
+    NAME="output" PATH="/welcomeprivuser.xhtml"
+    TARGET="rules:#welcomeprivuser.xhtml" TITLE="privilege" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#mycatalogs.xhtml:2" NAME="item2"
+   PATH="/mycatalogs.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="true::#listmyfiles.xhtml" NAME="output"
+    PATH="/listmyfiles.xhtml" TARGET="rules:#listmyfiles.xhtml"
+    TITLE="true" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#mycatalogs.xhtml:3" NAME="item3"
+   PATH="/mycatalogs.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="false::#nofiles.xhtml" NAME="output"
+    PATH="/nofiles.xhtml" TARGET="rules:#nofiles.xhtml" TITLE="false" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#mycatalogs.xhtml:4" NAME="item4"
+   PATH="/mycatalogs.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="create::#catalogcreate.xhtml" NAME="output"
+    PATH="/catalogcreate.xhtml" TARGET="rules:#catalogcreate.xhtml"
+    TITLE="create" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#mycatalogs.xhtml:5" NAME="item5"
+   PATH="/mycatalogs.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="fileupload::#fileupload.xhtml" NAME="output"
+    PATH="/fileupload.xhtml" TARGET="rules:#fileupload.xhtml"
+    TITLE="fileupload" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#mycatalogs.xhtml:6" NAME="item6"
+   PATH="/mycatalogs.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="deletecatsuccess::#catalogdeleted.xhtml"
+    NAME="output" PATH="/catalogdeleted.xhtml"
+    TARGET="rules:#catalogdeleted.xhtml" TITLE="deletecatsuccess" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#mycatalogs.xhtml:7" NAME="item7"
+   PATH="/mycatalogs.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="mycatalogs::#mycatalogs.xhtml" NAME="output"
+    PATH="/mycatalogs.xhtml" TARGET="rules:#mycatalogs.xhtml"
+    TITLE="mycatalogs" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#nocatalogs.xhtml" PATH="/nocatalogs.xhtml"
+  SHAPE="96,225,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#nocatalogs.xhtml:0" NAME="item"
+   PATH="/nocatalogs.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="normal::#welcome.xhtml" NAME="output"
+    PATH="/welcome.xhtml" TARGET="rules:#welcome.xhtml" TITLE="normal" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#nocatalogs.xhtml:1" NAME="item1"
+   PATH="/nocatalogs.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="privilege::#welcomeprivuser.xhtml"
+    NAME="output" PATH="/welcomeprivuser.xhtml"
+    TARGET="rules:#welcomeprivuser.xhtml" TITLE="privilege" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#listfiles.xhtml" PATH="/listfiles.xhtml"
+  SHAPE="368,657,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#listfiles.xhtml:0" NAME="item"
+   PATH="/listfiles.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="allcatalogs::#allcatalogs.xhtml"
+    NAME="output" PATH="/allcatalogs.xhtml"
+    TARGET="rules:#allcatalogs.xhtml" TITLE="allcatalogs" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#nofiles.xhtml" PATH="/nofiles.xhtml"
+  SHAPE="368,689,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#nofiles.xhtml:0" NAME="item"
+   PATH="/nofiles.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="mycatalogs::#mycatalogs.xhtml" NAME="output"
+    PATH="/mycatalogs.xhtml" TARGET="rules:#mycatalogs.xhtml"
+    TITLE="mycatalogs" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#nofiles.xhtml:1" NAME="item1"
+   PATH="/nofiles.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="allcatalogs::#allcatalogs.xhtml"
+    NAME="output" PATH="/allcatalogs.xhtml"
+    TARGET="rules:#allcatalogs.xhtml" TITLE="allcatalogs" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#catalogcreate.xhtml"
+  PATH="/catalogcreate.xhtml" SHAPE="368,721,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#catalogcreate.xhtml:0" NAME="item"
+   PATH="/catalogcreate.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="true::#catalogcreated.xhtml" NAME="output"
+    PATH="/catalogcreated.xhtml" TARGET="rules:#catalogcreated.xhtml"
+    TITLE="true" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#catalogcreate.xhtml:1" NAME="item1"
+   PATH="/catalogcreate.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="false::#catalogcreatefail.xhtml"
+    NAME="output" PATH="/catalogcreatefail.xhtml"
+    TARGET="rules:#catalogcreatefail.xhtml" TITLE="false" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#catalogcreatefail.xhtml"
+  PATH="/catalogcreatefail.xhtml" SHAPE="640,1393,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#catalogcreatefail.xhtml:0" NAME="item"
+   PATH="/catalogcreatefail.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="mycatalogs::#mycatalogs.xhtml" NAME="output"
+    PATH="/mycatalogs.xhtml" TARGET="rules:#mycatalogs.xhtml"
+    TITLE="mycatalogs" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#catalogcreated.xhtml"
+  PATH="/catalogcreated.xhtml" SHAPE="640,1281,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#catalogcreated.xhtml:0" NAME="item"
+   PATH="/catalogcreated.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="mycatalogs::#mycatalogs.xhtml" NAME="output"
+    PATH="/mycatalogs.xhtml" TARGET="rules:#mycatalogs.xhtml"
+    TITLE="mycatalogs" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#feed.xhtml" PATH="/feed.xhtml"
+  SHAPE="96,225,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#feed.xhtml:0" NAME="item" PATH="/feed.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="back::#welcomeprivuser.xhtml" NAME="output"
+    PATH="/welcomeprivuser.xhtml" TARGET="rules:#welcomeprivuser.xhtml"
+    TITLE="back" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#feed.xhtml:1" NAME="item1" PATH="/feed.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="feed::#feed.xhtml" NAME="output"
+    PATH="/feed.xhtml" TARGET="rules:#feed.xhtml" TITLE="feed" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#fileupload.xhtml" PATH="/fileupload.xhtml"
+  SHAPE="368,785,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#fileupload.xhtml:0" NAME="item"
+   PATH="/fileupload.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="success::#uploaded.xhtml" NAME="output"
+    PATH="/uploaded.xhtml" TARGET="rules:#uploaded.xhtml"
+    TITLE="success" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#fileupload.xhtml:1" NAME="item1"
+   PATH="/fileupload.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="fail::#uploadfail.xhtml" NAME="output"
+    PATH="/uploadfail.xhtml" TARGET="rules:#uploadfail.xhtml"
+    TITLE="fail" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#fileupload.xhtml:2" NAME="item2"
+   PATH="/fileupload.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="home::#welcomeprivuser.xhtml" NAME="output"
+    PATH="/welcomeprivuser.xhtml" TARGET="rules:#welcomeprivuser.xhtml"
+    TITLE="home" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#uploaded.xhtml" PATH="/uploaded.xhtml"
+  SHAPE="640,1345,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#uploaded.xhtml:0" NAME="item"
+   PATH="/uploaded.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="home::#welcomeprivuser.xhtml" NAME="output"
+    PATH="/welcomeprivuser.xhtml" TARGET="rules:#welcomeprivuser.xhtml"
+    TITLE="home" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#uploadfail.xhtml" PATH="/uploadfail.xhtml"
+  SHAPE="640,1345,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#uploadfail.xhtml:0" NAME="item"
+   PATH="/uploadfail.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="home::#welcomeprivuser.xhtml" NAME="output"
+    PATH="/welcomeprivuser.xhtml" TARGET="rules:#welcomeprivuser.xhtml"
+    TITLE="home" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#listmyfiles.xhtml" PATH="/listmyfiles.xhtml"
+  SHAPE="96,769,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#listmyfiles.xhtml:0" NAME="item"
+   PATH="/listmyfiles.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="mycatalogs::#mycatalogs.xhtml" NAME="output"
+    PATH="/mycatalogs.xhtml" TARGET="rules:#mycatalogs.xhtml"
+    TITLE="mycatalogs" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#listmyfiles.xhtml:1" NAME="item1"
+   PATH="/listmyfiles.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="deletesuccess::#filedeleted.xhtml"
+    NAME="output" PATH="/filedeleted.xhtml"
+    TARGET="rules:#filedeleted.xhtml" TITLE="deletesuccess" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#filedeleted.xhtml" PATH="/filedeleted.xhtml"
+  SHAPE="368,1505,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#filedeleted.xhtml:0" NAME="item"
+   PATH="/filedeleted.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="home::#welcomeprivuser.xhtml" NAME="output"
+    PATH="/welcomeprivuser.xhtml" TARGET="rules:#welcomeprivuser.xhtml"
+    TITLE="home" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#catalogdeleted.xhtml"
+  PATH="/catalogdeleted.xhtml" SHAPE="368,817,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#catalogdeleted.xhtml:0" NAME="item"
+   PATH="/catalogdeleted.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="home::#welcomeprivuser.xhtml" NAME="output"
+    PATH="/welcomeprivuser.xhtml" TARGET="rules:#welcomeprivuser.xhtml"
+    TITLE="home" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+</PROCESS>
